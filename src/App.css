@@ -1,0 +1,5 @@
+@import './css/theme.css';
+@import './css/components/grid.css';
+#root {
+  min-height: 100vh;
+}

@@ -1,0 +1,27 @@
+footer {
+    background: var(--color-background);
+    padding-block: var(--space-s);
+    padding-inline: var(--space-xl);
+    border-top: 1px solid var(--brand-color-tertiary);
+
+
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        align-items: center;
+        padding-block: var(--space-m);
+    }
+
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-m);
+        align-items: center;
+        justify-self: end;
+    }
+}
+

@@ -1,0 +1,29 @@
+@font-face {
+  /* Stub: replace with licensed Sofia Pro webfont files when available. */
+  font-family: 'Sofia Pro';
+  src: local('Sofia Pro');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color: #ffffff;
+  background-color: #000000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #000000;
+}
