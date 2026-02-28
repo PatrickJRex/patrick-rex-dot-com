@@ -1,6 +1,6 @@
 import '../css/components/Hero.css';
-const imgLogoMark = './src/assets/logo.svg'
-const imgLastName = './src/assets/surname.svg'
+const imgLogoMark = './assets/logo.svg'
+const imgLastName = './assets/surname.svg'
 
 export function Hero() {
 
