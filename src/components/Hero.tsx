@@ -23,7 +23,7 @@ export function Hero() {
     <p className="hero-first-name">
           patrick
         </p>
-    <img src={imgLastName} className="hero-surname" alt="patrick rex logo - crown image" aria-hidden="true" />
+    <img src={imgLastName} className="hero-surname" alt="REX" aria-hidden="true" />
     </div>
     
 
