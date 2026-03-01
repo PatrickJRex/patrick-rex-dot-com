@@ -7,7 +7,7 @@ const revelystLogo = './assets/brands/revelyst-logo.svg';
 export function BrandSlider() {
   return (
     <>
- <div className="pl-s md:pl-xxl pt-xxl">
+ <div className="pl-m md:pl-xxl pt-m md:pt-xxl">
  <h2 className="type-h2 col-start-1 col-end-4 bg-gradient-to-r from-brand-primary via-50% via-brand-secondary to-brand-secondary text-transparent bg-clip-text">Where I've Worked</h2>
  </div>
    <div className="brand-slider-container">

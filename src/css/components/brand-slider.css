@@ -18,15 +18,10 @@
 }
 .brand-slider {
     --size: clamp(10rem, 1rem + 40vmin, 20rem);
-    --gap: calc(var(--size) / 7);
+    --gap: calc(var(--size) / 8);
     --scroll-start: 0;
     --scroll-end: calc(-100% - var(--gap));
     --duration: 40s;
-
-    @media (max-width: 768px) {
-        --duration: 20s;
-        --gap: calc(var(--size) / 3);
-    }
 
     position: relative;
     display: flex;
@@ -35,6 +30,7 @@
     width: 100%;
     max-width: 100%;
     animation: scrolling var(--duration) linear infinite;
+    gap: var(--gap);
 
     @media (prefers-reduced-motion: reduce) {
         animation-play-state: paused;
@@ -50,7 +46,6 @@
         overflow: hidden;
         gap: var(--gap);
         white-space: nowrap;
-        width: max-content;
         min-width: 100%;
         align-items: center;
         justify-content: space-around;
