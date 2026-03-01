@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  color: #ffffff;
+  color: var(--brand-color-quaternary);
 }
 
 .hero__grid {
@@ -45,7 +45,7 @@
   height: auto;
   grid-row: 1 ;
   justify-self: start;
-  margin-bottom: var(--space-s);
+  margin-bottom: var(--space-xl);
 
   @media (min-width: 769px) {
     grid-column: 12 / -1;
@@ -76,8 +76,7 @@
 
 .hero__nameplate {
   grid-column: 1 / -1;
-  grid-row: 4 / 5;
-  margin-top: calc(var(--space-xxl) * 4);
+  grid-row: 3 / 4;
 }
 
 .hero-first-name {
@@ -113,6 +112,22 @@
   font-size: 2rem;
   line-height: 1;
   grid-row: 5 / 6;
+}
+
+.hero__down-arrow-icon {
+  animation: arrow-bounce 1s ease-in-out infinite;
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .hero__what-i-do {

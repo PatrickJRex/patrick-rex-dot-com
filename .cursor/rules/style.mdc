@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+## CSS Class name creation best practices
+- Follow this pattern to name new css classes: 
+
+.selector
+.selector-child
+.selector--augmentation

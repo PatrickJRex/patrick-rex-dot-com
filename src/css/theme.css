@@ -85,7 +85,7 @@
   }
 
   /* lift it up so it doesn't overlap with the content */
-  :not(.body-fill) {
+  :not(.body-fill, .gradient-wrapper, .gradient-fill) {
     position: relative;
     z-index: 2;
   }
@@ -153,7 +153,7 @@
   text-decoration: none;
 
   &:visited {
-    color: var(--brand-color-primary);
+    color: var(--brand-color-secondary);
   }
 
   &:hover {

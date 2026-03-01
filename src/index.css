@@ -1,10 +1,64 @@
-@font-face {
-  /* Stub: replace with licensed Sofia Pro webfont files when available. */
-  font-family: 'Sofia Pro';
-  src: local('Sofia Pro');
-  font-style: normal;
-  font-display: swap;
+@import "tailwindcss";
+
+@theme inline {
+  --font-header: var(--header-font-family);
+  --font-body: var(--body-font-family);
+  --font-display-h1: var(--type-h1-family);
+  --font-display-h2: var(--type-h2-family);
+
+  --font-weight-ui-black: var(--font-weight-black);
+  --font-weight-ui-bold: var(--font-weight-bold);
+  --font-weight-ui-regular: var(--font-weight-regular);
+  --font-weight-ui-light: var(--font-weight-light);
+  --font-weight-type-h1: var(--type-h1-weight);
+  --font-weight-type-h2: var(--type-h2-weight);
+  --font-weight-type-body: var(--type-body-weight);
+
+  --text-step-000: var(--size-step-000);
+  --text-step-00: var(--size-step-00);
+  --text-step-0: var(--size-step-0);
+  --text-step-1: var(--size-step-1);
+  --text-step-2: var(--size-step-2);
+  --text-step-3: var(--size-step-3);
+  --text-step-4: var(--size-step-4);
+  --text-step-5: var(--size-step-5);
+  --text-step-6: var(--size-step-6);
+  --text-step-7: var(--size-step-7);
+  --text-step-8: var(--size-step-8);
+  --text-step-9: var(--size-step-9);
+  --text-step-10: var(--size-step-10);
+  --text-step-11: var(--size-step-11);
+  --text-step-12: var(--size-step-12);
+  --text-body: var(--type-body-size);
+  --text-type-h1: var(--type-h1-size);
+  --text-type-h2: var(--type-h2-size);
+
+  --leading-copy-micro: var(--leading-micro);
+  --leading-copy-small: var(--leading-small);
+  --leading-copy-medium: var(--leading-medium);
+  --leading-copy-large: var(--leading-large);
+  --leading-copy-jumbo: var(--leading-jumbo);
+  --leading-type-h1: var(--type-h1-line-height);
+  --leading-type-h2: var(--type-h2-line-height);
+  --leading-type-body: var(--type-body-line-height);
+
+  --tracking-type-h1: var(--type-h1-letter-spacing);
+  --tracking-type-h2: var(--type-h2-letter-spacing);
+  --tracking-type-body: var(--type-body-letter-spacing);
+
+  --spacing-xs: var(--space-xs);
+  --spacing-s: var(--space-s);
+  --spacing-m: var(--space-m);
+  --spacing-l: var(--space-l);
+  --spacing-xl: var(--space-xl);
+  --spacing-xxl: var(--space-xxl);
+
+  --color-brand-primary: var(--brand-color-primary);
+  --color-brand-secondary: var(--brand-color-secondary);
+  --color-brand-tertiary: var(--brand-color-tertiary);
+  --color-brand-quaternary: var(--brand-color-quaternary);
 }
+
 
 :root {
   color: #ffffff;
