@@ -1,6 +1,7 @@
 import '../css/components/Hero.css';
 const imgLogoMark = './assets/logo.svg'
 const imgLastName = './assets/surname.svg'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
 
 export function Hero() {
 
@@ -18,21 +19,30 @@ export function Hero() {
           </p>
         </div>
 
-    <div className="hero__nameplate">
-   
-    <p className="hero-first-name">
-          patrick
-        </p>
-    <img src={imgLastName} className="hero-surname" alt="REX" aria-hidden="true" />
-    </div>
+        <div className="hero-mobile-buttons pt-s flex flex-row gap-s sm:hidden">
+        <a href="https://github.com/PatrickJRex" target="_blank" rel="noopener noreferrer" className="hero-mobile-buttons__button font-body border-1 border-brand-secondary rounded-full px-m py-xs bg-brand-secondary/10 text-brand-secondary"><FaGithub className="w-6 h-6" /> </a>
+         <a href="https://www.linkedin.com/in/patrickjrex" target="_blank" rel="noopener noreferrer" className="font-body border-1 border-brand-secondary rounded-full px-m py-xs bg-brand-secondary/10 text-brand-secondary"><FaLinkedin className="w-6 h-6" /></a>
+         <a href="mailto:prexdesigns@gmail.com?subject=Hello Patrick, I'm interested in your services" target="_blank"
+          rel="noopener noreferrer" 
+          className="font-body border-1 border-brand-secondary 
+          rounded-full px-m py-xs bg-brand-secondary/10 text-brand-secondary"><FaEnvelope className="w-6 h-6" /></a>
+        </div>
+
+        <div className="hero__nameplate hidden sm:block h-[300px] sm:h-auto">
+      
+        <p className="hero-first-name">
+              patrick
+            </p>
+        <img src={imgLastName} className="hero-surname" alt="REX" aria-hidden="true" />
+        </div>
     
 
-        <p className="hero__down-arrow" aria-hidden="true">
-          ↓
+        <p className="hero__down-arrow hidden sm:block" aria-hidden="true">
+          <span className="hero__down-arrow-icon">↓</span>
         </p>
 
         <div className="hero__what-i-do">
-          <h2 className="type-h2 hero__what-i-do-heading">What I do</h2>
+          <h2 className="type-h2 col-start-1 col-end-4 bg-gradient-to-r from-brand-primary via-50% via-brand-secondary to-brand-secondary text-transparent bg-clip-text">What I do</h2>
           <p className="type-body hero__what-i-do-copy">
             By day, I&apos;m a Salesforce Commerce Cloud II Developer at <a href="https://revelyst.com" target="_blank" rel="noopener noreferrer" className="type-body-link">Revelyst</a>, teaming up
             with marketers, designers, &amp; fellow devs to bring storefronts to life.
@@ -42,6 +52,7 @@ export function Hero() {
             hand-coded HTML, CSS, &amp; JS-because sometimes the classics just feel right.
           </p>
           <ul className="type-body hero__what-i-do-list">
+          <h2 className="type-h2 col-start-1 col-end-4 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-secondary text-transparent bg-clip-text block pt-s pb-s sm:hidden">Skills</h2>
             <li>Front-end development</li>
             <li>UX / Graphic Design</li>
             <li>-------------------------</li>
