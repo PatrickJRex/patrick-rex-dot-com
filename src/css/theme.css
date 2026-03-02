@@ -62,6 +62,7 @@
   body {
     position: relative;
     background-color: var(--brand-color-primary);
+    overflow-x: hidden;
   }
 
   .body-fill {
@@ -86,7 +87,7 @@
   }
 
   /* lift it up so it doesn't overlap with the content */
-  :not(.body-fill, .gradient-wrapper, .gradient-fill) {
+  :not(.body-fill, .gradient-wrapper, .gradient-fill, .brand-mark) {
     position: relative;
     z-index: 2;
   }

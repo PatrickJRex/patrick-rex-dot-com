@@ -10,6 +10,7 @@
 
 .brand-slider {
     width: 100%;
+    z-index: 4;
     max-width: 80vw;
     overflow: hidden;
     padding-block: var(--space-m);
@@ -54,12 +55,10 @@
     height: 100%;
     object-fit: cover;
     filter: grayscale(100%);
-    opacity: 0.5;
 }
 
 .brand-slider-item img:hover {
     filter: grayscale(0%);
-    opacity: 1;
 }
 
 @keyframes scroll {
