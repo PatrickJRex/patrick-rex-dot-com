@@ -61,6 +61,7 @@
 
   body {
     position: relative;
+    background-color: var(--brand-color-primary);
   }
 
   .body-fill {
