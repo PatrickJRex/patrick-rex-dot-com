@@ -1,8 +1,27 @@
 import '../css/components/brand-slider.css';
-const patagoniaLogo = './assets/brands/patagonia.svg';
-const riteAidLogo = './assets/brands/Rite_aid_logo_2021.svg';
-const redVanLogo = './assets/brands/red-van-logo.svg';
-const revelystLogo = './assets/brands/revelyst-logo.svg';
+const patagoniaLogo = './assets/brands/brand-logos_patagonia.svg';
+const riteAidLogo = './assets/brands/brand-logos_rite-aid.svg';
+const redVanLogo = './assets/brands/brand-logos_red-van-workshop.svg';
+const revelystLogo = './assets/brands/brand-logos_revelyst.svg';
+
+const brandLogos = [
+  {
+    name: 'Revelyst',
+    logo: revelystLogo,
+  },
+  {
+    name: 'Patagonia',
+    logo: patagoniaLogo,
+  },
+  {
+    name: 'Red Van Workshop',
+    logo: redVanLogo,
+  },
+  {
+    name: 'Rite Aid',
+    logo: riteAidLogo,
+  },
+]
 
 export function BrandSlider() {
   return (
@@ -10,36 +29,20 @@ export function BrandSlider() {
  <div className="pl-m md:pl-xxl pt-m md:pt-xxl">
  <h2 className="type-h2 col-start-1 col-end-4 bg-gradient-to-r from-brand-primary via-50% via-brand-secondary to-brand-secondary text-transparent bg-clip-text">Where I've Worked</h2>
  </div>
-   <div className="brand-slider-container">
-      <div className="brand-slider">
-     <div className="brand-slider-inner">
-     <div className="brand-slider-item">
-                <img src={revelystLogo} alt="Revelyst" />
-            </div>
-            <div className="brand-slider-item">
-                <img src={patagoniaLogo} alt="Patagonia" />
-            </div>
-            <div className="brand-slider-item">
-                <img src={redVanLogo} alt="Red Van Workshop" />
-            </div>
-            <div className="brand-slider-item">
-                <img src={riteAidLogo} alt="Rite Aid" />
-            </div>
-     </div>
-     <div className="brand-slider-inner">
-     <div className="brand-slider-item">
-                <img src={revelystLogo} alt="Revelyst" />
-            </div>
-            <div className="brand-slider-item">
-                <img src={patagoniaLogo} alt="Patagonia" />
-            </div>
-            <div className="brand-slider-item">
-                <img src={redVanLogo} alt="Red Van Workshop" />
-            </div>
-            <div className="brand-slider-item">
-                <img src={riteAidLogo} alt="Rite Aid" />
-            </div>
-     </div>
+   <div className="brand-slider-container px-xxl">
+      <div className="brand-slider mx-auto">
+       <div className="brand-slider-inner">
+        {brandLogos.map((logo) => (
+          <div className="brand-slider-item" key={logo.name}>
+            <img src={logo.logo} alt={logo.name} />
+          </div>
+        ))}
+          {brandLogos.map((logo) => (
+          <div className="brand-slider-item" aria-hidden="true" key={logo.name}>
+            <img src={logo.logo} alt={logo.name} />
+          </div>
+        ))}
+       </div>
     </div>
     </div>
     </>
