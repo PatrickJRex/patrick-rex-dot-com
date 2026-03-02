@@ -1,0 +1,6 @@
+.brand-mark__image {
+  --brand-mark-rotation: 0deg;
+  transform: translate(50%, 50%) rotate(var(--brand-mark-rotation));
+  transform-origin: center;
+  will-change: transform;
+}
