@@ -37,11 +37,6 @@ export function BrandSlider() {
             <img src={logo.logo} alt={logo.name} />
           </div>
         ))}
-          {brandLogos.map((logo) => (
-          <div className="brand-slider-item" aria-hidden="true" key={logo.name}>
-            <img src={logo.logo} alt={logo.name} />
-          </div>
-        ))}
        </div>
     </div>
     </div>
