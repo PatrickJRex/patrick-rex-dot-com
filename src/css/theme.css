@@ -61,36 +61,13 @@
 
   body {
     position: relative;
-    background-color: var(--brand-color-primary);
+    background-color: var(--brand-color-tertiary);
     overflow-x: hidden;
   }
 
-  .body-fill {
-    background: linear-gradient(to top right, rgba(249, 237, 36, 0.10) 3.26%, rgba(0, 0, 0, 0.02) 85.73%), linear-gradient(25deg, rgba(0, 0, 0, 0.12) -82.29%, rgba(151, 71, 255, 0.12) 74.07%), #000;
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+ 
 
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background-color: var(--brand-color-tertiary);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E");
-      background-blend-mode: multiply;
-      background-size: 100% 100%;
-      opacity: 0.4;
-      backdrop-filter: blur(2px);
-    }
-
-  }
-
-  /* lift it up so it doesn't overlap with the content */
-  :not(.body-fill, .gradient-wrapper, .gradient-fill, .brand-mark) {
-    position: relative;
-    z-index: 2;
-  }
+ 
 
   .sofia-pro {
     font-family: var(--header-font-family);

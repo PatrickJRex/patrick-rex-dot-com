@@ -2,7 +2,7 @@ import '../css/components/footer.css';
 
 export function Footer() {
     return (
-        <footer className="footer px-m md:px-xl">
+        <footer className="footer px-m md:px-xl relative z-10">
             <div className="footer-content gap-s md:gap-m">
                 <div className="copyright">
                     <p className="type-body">©{new Date().getFullYear()} Patrick Rex. All rights reserved. </p>

@@ -1,50 +1,98 @@
 .gradient-wrapper {
-    position: fixed;
+    position: absolute;
     inset: 0;
     z-index: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     overflow: hidden;
-
-    .gradient-fill {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background: linear-gradient(135deg,
-         rgba(249, 237, 36, 0.10) 3.26%, 
-         rgba(0, 0, 0, 0.02) 85.73%), 
-         linear-gradient(25deg, 
-         rgba(0, 0, 0, 0.12) 20.2%, 
-         rgba(151, 71, 255, 0.33) 74.07%), 
-         var(--brand-color-tertiary);
-         background-size: 200% 200%;
-         background-position: 0% 0%;
-        animation: gradient-fill 18s ease-in-out infinite;
-    }
-    
-    .gradient-fill::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background-color: var(--brand-color-tertiary);
-        opacity: 0.5;
-    }
 }
 
-@keyframes gradient-fill {
-    0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+.gradient-blob-overlay {
+  width: 100%;
+  height: 100%;
+  background: var(--brand-color-tertiary);
+  opacity: 0.45;
+  backdrop-filter: blur(40px) url(#noiseFilter);
+  position: absolute;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    opacity: 0.65;
+  }
+}
+
+.gradient-blob-wrapper {
+  animation: moveBlob 10s linear infinite alternate, rotate 10s linear infinite alternate; 
+}
+
+.gradient-blob {
+  width: 75vw;
+  aspect-ratio: 1/1;
+  background: linear-gradient(
+    rgba(151, 71, 255, 0.44),
+  rgba(151, 71, 255, 0.8), rgba(249, 237, 36,0.8));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  position: absolute;
+  opacity: 0.55;
+  top: 0;
+  right: 0;
+  transform-origin: bottom right;
+  animation: morphBlob 10s linear infinite;
+  filter: blur(40px);
+  z-index: 0;
+}
+.gradient-blob-2 {
+   width: 50vw;
+   aspect-ratio: 1/1;
+   background: linear-gradient(
+    rgba(151, 71, 255, 0.44),
+    rgba(151, 71, 255, 0.8), rgba(249, 237, 36,0.8));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  position: absolute;
+  opacity: 0.55;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  animation: morphBlob 10s linear infinite;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+@keyframes rotate {
+from {
+  transform: rotate(0deg);
+}
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveBlob {
+ 0%,100% {
+   transform: translate(-50%, 0);
+ }
+  25% {
+    transform: translate(-35%, 20vh);
+  }
+  50% {
+    transform: translate(-75%, 30vh);
+  }
+  75% {
+    transform: translate(-65%, 40vh);
+  }
+}
+
+@keyframes morphBlob {
+  0%,100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  25% {
+    border-radius: 70% 30% 30% 70% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  75% {
+    border-radius: 70% 30% 30% 70% / 30% 30% 70% 70%;
+  }
 }
