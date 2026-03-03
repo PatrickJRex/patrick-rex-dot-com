@@ -26,10 +26,10 @@ const brandLogos = [
 export function BrandSlider() {
   return (
     <>
- <div className="pl-m md:pl-xxl pt-m md:pt-xxl">
+ <div className="pl-m md:pl-xxl pt-m md:pt-xxl max-w-[1920px] mx-auto relative z-10">
  <h2 className="type-h2 col-start-1 col-end-4 bg-gradient-to-r from-brand-primary via-50% via-brand-secondary to-brand-secondary text-transparent bg-clip-text">Where I've Worked</h2>
  </div>
-   <div className="brand-slider-container px-xxl">
+   <div className="brand-slider-container px-xxl max-w-[1920px] mx-auto relative z-10">
       <div className="brand-slider mx-auto">
        <div className="brand-slider-inner">
         {brandLogos.map((logo) => (
