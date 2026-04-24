@@ -1,0 +1,121 @@
+/* Critical CSS for first paint (hero + base layout). */
+:root {
+  --type-h2-size: clamp(2rem, 6vw, 61.04px);
+  --type-h2-line-height: 1.25;
+  --type-h2-letter-spacing: -0.033em;
+  --type-body-size: 16px;
+  --type-body-line-height: 1.5;
+  --type-body-letter-spacing: -0.02em;
+  --space-xl: 40px;
+  --brand-color-secondary: #f9ed24;
+  --brand-color-tertiary: #000000;
+  --brand-color-quaternary: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  color: var(--brand-color-quaternary);
+}
+
+.hero__grid {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
+  width: min(100%, 1920px);
+  margin-inline: auto;
+  padding-inline: 48px;
+  padding-top: 48px;
+  padding-bottom: 56px;
+}
+
+.hero__logo-mark {
+  width: 68px;
+  height: auto;
+  grid-row: 1;
+  justify-self: start;
+  margin-bottom: var(--space-xl);
+}
+
+.hero__intro {
+  grid-column: 1 / 7;
+  padding-top: 4px;
+  margin: 0;
+}
+
+.hero__intro p {
+  margin: 0;
+}
+
+.type-h2 {
+  font-family: "Sofia Pro", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: var(--type-h2-size);
+  font-weight: 700;
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-h2-letter-spacing);
+}
+
+.type-body,
+.type-body-link {
+  font-family: "Fira Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--type-body-size);
+  font-weight: 400;
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+}
+
+.type-body-link {
+  color: var(--brand-color-secondary);
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .hero__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .hero__intro {
+    grid-column: 1 / 6;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: 24px;
+    padding-top: 24px;
+    row-gap: 0.75rem;
+  }
+
+  .hero__intro {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+}
