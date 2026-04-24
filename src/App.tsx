@@ -5,7 +5,7 @@ import { Nav } from './components/common/layout/Nav'
 const BrandSlider = lazy(() => import('./components/BrandSlider.tsx').then((module) => ({ default: module.BrandSlider })))
 const Gradient = lazy(() => import('./components/Gradient.tsx').then((module) => ({ default: module.Gradient })))
 const BrandMark = lazy(() => import('./components/BrandMark.tsx').then((module) => ({ default: module.BrandMark })))
-
+const WhatIDo = lazy(() => import('./components/WhatIDo.tsx').then((module) => ({ default: module.WhatIDo })))
 function App() {
   const [showDeferredSections, setShowDeferredSections] = useState(false)
 
@@ -29,6 +29,7 @@ function App() {
       <Hero />
       {showDeferredSections ? (
         <Suspense fallback={null}>
+          <WhatIDo />
           <BrandSlider />
         </Suspense>
       ) : null}
