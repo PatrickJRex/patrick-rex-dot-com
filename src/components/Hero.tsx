@@ -1,15 +1,13 @@
 import '../css/components/Hero.css';
 const imgLastName = './assets/surname.svg'
-import Logo from './Logo';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
 
 export function Hero() {
 
   return (
-    <section className="hero" aria-label="Introduction">
+    <section className="hero pt-[120px] md:pt-[64px]" aria-label="Introduction">
 
       <div className="hero__grid">
-        <Logo className="hero__logo-mark" />
         <div className="hero__intro type-h2">
           <p>Hello, I&apos;m Patrick.</p>
           <p>
