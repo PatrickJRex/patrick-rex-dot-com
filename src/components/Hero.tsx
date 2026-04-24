@@ -1,5 +1,4 @@
 import '../css/components/Hero.css';
-const imgLogoMark = './assets/logo.svg'
 const imgLastName = './assets/surname.svg'
 import Logo from './Logo';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
