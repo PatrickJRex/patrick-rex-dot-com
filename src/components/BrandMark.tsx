@@ -14,8 +14,13 @@ export function BrandMark() {
             return
         }
 
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return
+        }
+
         let inView = false
         let ticking = false
+        let observer: IntersectionObserver | null = null
 
         const updateRotation = () => {
             ticking = false
@@ -44,25 +49,36 @@ export function BrandMark() {
             window.requestAnimationFrame(updateRotation)
         }
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                inView = entry.isIntersecting
-                if (inView) {
-                    updateRotation()
-                }
-            },
-            {
-                threshold: 0.1,
-            },
-        )
+        const startTracking = () => {
+            observer = new IntersectionObserver(
+                ([entry]) => {
+                    inView = entry.isIntersecting
+                    if (inView) {
+                        updateRotation()
+                    }
+                },
+                {
+                    threshold: 0.1,
+                },
+            )
 
-        observer.observe(containerEl)
-        window.addEventListener('scroll', onScroll, { passive: true })
-        window.addEventListener('resize', onScroll)
-        updateRotation()
+            observer.observe(containerEl)
+            window.addEventListener('scroll', onScroll, { passive: true })
+            window.addEventListener('resize', onScroll)
+            updateRotation()
+        }
+
+        const idleId = window.requestIdleCallback
+            ? window.requestIdleCallback(startTracking, { timeout: 2000 })
+            : window.setTimeout(startTracking, 300)
 
         return () => {
-            observer.disconnect()
+            if (window.cancelIdleCallback) {
+                window.cancelIdleCallback(idleId as number)
+            } else {
+                window.clearTimeout(idleId as number)
+            }
+            observer?.disconnect()
             window.removeEventListener('scroll', onScroll)
             window.removeEventListener('resize', onScroll)
         }
