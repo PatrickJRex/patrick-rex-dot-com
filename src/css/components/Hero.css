@@ -4,7 +4,6 @@
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
   color: var(--brand-color-quaternary);
 }
 
