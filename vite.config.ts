@@ -6,7 +6,7 @@ import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const currentDir = fileURLToPath(new URL('.', import.meta.url))
-const criticalCssPath = resolve(currentDir, 'src/critical.css')
+const criticalCssPath = resolve(currentDir, 'src/css/theme.css')
 
 function inlineCriticalCss() {
   return {
