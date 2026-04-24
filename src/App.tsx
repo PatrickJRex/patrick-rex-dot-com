@@ -1,10 +1,10 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
 import { Hero } from './components/Hero'
 import { Footer } from './components/Footer.tsx'
+import { Nav } from './components/common/layout/Nav'
 const BrandSlider = lazy(() => import('./components/BrandSlider.tsx').then((module) => ({ default: module.BrandSlider })))
 const Gradient = lazy(() => import('./components/Gradient.tsx').then((module) => ({ default: module.Gradient })))
 const BrandMark = lazy(() => import('./components/BrandMark.tsx').then((module) => ({ default: module.BrandMark })))
-
 
 function App() {
   const [showDeferredSections, setShowDeferredSections] = useState(false)
@@ -25,6 +25,7 @@ function App() {
 
   return (
     <>
+    <Nav />
       <Hero />
       {showDeferredSections ? (
         <Suspense fallback={null}>
