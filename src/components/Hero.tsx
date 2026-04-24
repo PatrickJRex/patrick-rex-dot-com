@@ -34,7 +34,16 @@ export function Hero() {
         <p className="hero-first-name">
               patrick
             </p>
-        <img src={imgLastName} className="hero-surname" alt="REX" aria-hidden="true" />
+        <img
+          src={imgLastName}
+          className="hero-surname"
+          alt="REX"
+          aria-hidden="true"
+          width={1349}
+          height={529}
+          decoding="async"
+          fetchPriority="high"
+        />
         </div>
     
 

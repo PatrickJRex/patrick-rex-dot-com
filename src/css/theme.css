@@ -103,6 +103,7 @@
   font-weight: var(--type-h1-weight);
   line-height: var(--type-h1-line-height);
   letter-spacing: var(--type-h1-letter-spacing);
+  font-size-adjust: 0.5;
 }
 
 .type-h2 {
@@ -111,6 +112,7 @@
   font-weight: var(--type-h2-weight);
   line-height: var(--type-h2-line-height);
   letter-spacing: var(--type-h2-letter-spacing);
+  font-size-adjust: 0.5;
 }
 
 .type-body {

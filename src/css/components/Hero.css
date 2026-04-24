@@ -77,6 +77,7 @@
 .hero__nameplate {
   grid-column: 1 / -1;
   grid-row: 3 / 4;
+  min-height: clamp(140px, 22vw, 320px);
 }
 
 .hero-first-name {
@@ -96,7 +97,13 @@
 
 
 .hero-surname {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1349 / 529;
+  object-fit: contain;
+
   img {
     width: 100%;
     height: auto;
@@ -210,6 +217,7 @@
 
   .hero__nameplate {
     margin-top: 1.25rem;
+    min-height: 0;
   }
 
 
