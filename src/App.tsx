@@ -3,7 +3,6 @@ import { Hero } from './components/Hero'
 import { Footer } from './components/Footer.tsx'
 import { Nav } from './components/common/layout/Nav'
 const BrandSlider = lazy(() => import('./components/BrandSlider.tsx').then((module) => ({ default: module.BrandSlider })))
-const Gradient = lazy(() => import('./components/Gradient.tsx').then((module) => ({ default: module.Gradient })))
 const BrandMark = lazy(() => import('./components/BrandMark.tsx').then((module) => ({ default: module.BrandMark })))
 const WhatIDo = lazy(() => import('./components/WhatIDo.tsx').then((module) => ({ default: module.WhatIDo })))
 function App() {
@@ -36,7 +35,6 @@ function App() {
       <Footer />
       {showDeferredSections ? (
         <Suspense fallback={null}>
-          <Gradient />
           <BrandMark />
         </Suspense>
       ) : null}

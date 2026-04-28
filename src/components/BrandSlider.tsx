@@ -26,8 +26,16 @@ const brandLogos = [
 export function BrandSlider() {
   return (
     <>
- <div className="pl-m md:pl-xxl pt-m md:pt-xxl max-w-[1920px] mx-auto relative z-10">
- <h2 className="type-h2 col-start-1 col-end-4 bg-gradient-to-r from-brand-primary via-50% via-brand-secondary to-brand-secondary text-transparent bg-clip-text">Where I've Worked</h2>
+ <div id="where-ive-been" className="grid grid-cols-4 lg:grid-cols-12 gap-4 items-end
+ brand-slider-heading px-m md:px-xxl pt-xxl w-full max-w-[1920px] mx-auto relative z-10">
+<hr className="brand-slider-divider block col-start-1 col-end-13 border-b border-brand-secondary mb-xxl" />
+ <h2 className="type-h1 leading-none col-start-1 col-end-5">Where <br/> I've Been</h2>
+ <div className="col-start-1 col-end-5 lg:col-start-9 lg:col-end-13">
+  <p className="type-body text-brand-quaternary"> 
+    I've worked with a variety of brands, from small startups to large enterprises.
+    No matter where I go, I bring my passion for creating beautiful and functional websites.
+  </p>
+ </div>
  </div>
    <div className="brand-slider-container px-xxl max-w-[1920px] mx-auto relative z-10">
       <div className="brand-slider mx-auto">
